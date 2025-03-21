@@ -23,11 +23,11 @@ app.post('/api/recommendations', async (req, res) => {
   try {
     const { footprint, vehicleType, distance } = req.body;
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
-    
+
     const prompt = `Give 3 concise recommendations to reduce carbon footprint for someone who 
     travels ${distance} km by ${vehicleType}. Current footprint: ${footprint} kgCO2. 
     Use bullet points.`;
-    
+
     const result = await model.generateContent(prompt);
     const response = await result.response;
     res.json({ recommendations: response.text() });
