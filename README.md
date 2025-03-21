@@ -11,7 +11,7 @@ Node.js/Express backend for carbon footprint calculation and AI recommendations 
 
 1. Clone repository
 2. npm install
-3. Set up environment variables -> GOOGLE_API_KEY=AIzaSyDvcBBFFGneOxwzqZ_jGwj09pV39BqN1wg
+3. Set up environment variables -> GOOGLE_API_KEY
 
 ## Quick Start
 npm run dev  # Development mode (with nodemon)
